@@ -6,3 +6,19 @@ for element in numbers:
 name = "John"
 for char in name:
     print(char)
+
+print()
+
+for letter in "Giraffe Academy":
+    print(letter)
+
+print()
+
+for numb in range (3, 10):
+    print(numb)
+
+print()
+
+friends = ["Jim", "Caytlin", "Mark"]
+for index in range(len(friends)):
+    print(friends[index])

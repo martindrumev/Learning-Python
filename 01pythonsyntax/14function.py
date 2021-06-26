@@ -1,4 +1,5 @@
 # def = define
+# def = function
 def square(num):
     return num ** 2
 
@@ -19,3 +20,11 @@ def print_elements(list1):
         print(e)
 
 print_elements(mylist)
+print()
+
+def say_hi(name):
+    print("Hello " + name)
+say_hi("Mike")
+
+# 2 or more words we use in python _ underscore
+
