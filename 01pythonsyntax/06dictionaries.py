@@ -7,3 +7,4 @@ print(keys)
 
 vals = list(ages.values())
 print(vals)
+
