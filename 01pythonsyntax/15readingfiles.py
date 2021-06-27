@@ -7,9 +7,13 @@ print(file.readline())
 print()
 
 # Creating a list
+# Mode "r+" will read and write
 file = open("17data", "r")
 print(file.readlines())
 print()
+
+# for line in file.readlines():
+#   print(line)
 
 file.close()
 
@@ -23,3 +27,6 @@ with open("17data", "r") as file:
 with open("17data", "r") as file:
     for line in file:
         print(line.strip("\n"))
+
+print()
+
