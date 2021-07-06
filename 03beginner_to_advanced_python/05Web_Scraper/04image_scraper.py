@@ -1,0 +1,17 @@
+from bs4 import BeautifulSoup
+import requests
+from PIL import Image
+from io import BytesIO
+
+search = "pizza"
+params = {"q": search}
+r = requests.get("http://www.bing.com/images/search", params=params)
+
+soup = BeautifulSoup(r.text, "html.parser")
+links = soup.findAll("a", {"class": "thumb"})
+
+for item in links:
+    img_obj = requests.get(item.attr["src"])
+    title = item.attrs["href"].spilt("/")[-1]
+    img = Image.open(BytesIO(img_obj.content))
+    img.save("./scraped_images/" + title, img.format)
