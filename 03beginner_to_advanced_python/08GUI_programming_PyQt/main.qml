@@ -1,5 +1,5 @@
 import QtQuick 2.7
-import QtQuick.Windows 2.2
+import QtQuick 2.2
 import QtQuick.Controls 1.4
 import QtGraphicalEffects 1.0
 
@@ -7,6 +7,7 @@ ApplicationWindow {
     id: mainWindow
     height: 160
     width: 300
+    visible: true
 
     Item {
         id: page
@@ -15,11 +16,11 @@ ApplicationWindow {
 
         Rectangle {
             height: {
-                console.log("I\'m a comment")
+                console.log("Im a comment")
                 return 160
             }
 
-            color: "#ff0000"
+            color: "#ff000"
 
             Text {
                 text: "I am some regular text"
@@ -28,7 +29,6 @@ ApplicationWindow {
                 font.pixelSize: 12
 
             }
-
         }
     }
 }
